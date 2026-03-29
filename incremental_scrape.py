@@ -1,9 +1,10 @@
 import requests
 import pandas as pd
 import time
+import datetime
 import os
 
-SAVE_PATH = r"C:\Users\carte\Desktop\LOL Scorigami\all_time_all_leagues.csv"
+SAVE_PATH = "all_time_all_leagues.csv"
 BUFFER_DAYS = 1
 
 
@@ -71,7 +72,7 @@ def clean_df(df):
 
     df["gamelength_seconds"] = df["Gamelength"].apply(parse_gamelength)
 
-    # filter out remakes / bad rows
+    # filter out remakes / bad rows. games shouldnt end before 9 minutes so this should be safe
     df = df[df["gamelength_seconds"] > 900].copy()
     df = df.dropna(subset=["Team1Kills", "Team2Kills", "Winner", "DateTime UTC"]).copy()
 
@@ -87,6 +88,8 @@ def clean_df(df):
     # recompute all-time frequency across the FULL combined dataset
     score_counts = df["score"].value_counts()
     df["scorigami"] = df["score"].map(score_counts) == 1
+    
+    
 
     return df
 
@@ -137,12 +140,18 @@ if os.path.exists(SAVE_PATH):
     existing_df = pd.read_csv(SAVE_PATH)
 
     existing_df["DateTime UTC"] = pd.to_datetime(existing_df["DateTime UTC"], errors="coerce")
+    
+    # preserve existing scraped_at if it exists
+    if "scraped_at" not in existing_df.columns:
+        existing_df["scraped_at"] = pd.NaT
+
     latest_dt = existing_df["DateTime UTC"].max()
 
     if pd.isna(latest_dt):
         print("Could not read latest date from existing file. Rebuilding from scratch...")
         raw_df = fetch_all_games()
         clean_full_df = clean_df(raw_df)
+        clean_full_df["scraped_at"] = datetime.datetime.now()
         clean_full_df.to_csv(SAVE_PATH, index=False)
         print(f"Saved rebuilt dataset to: {SAVE_PATH}")
     else:
@@ -151,9 +160,12 @@ if os.path.exists(SAVE_PATH):
         if new_df.empty:
             print("No rows returned from incremental scrape.")
         else:
+            # stamp only the new rows before combining
+            new_df["scraped_at"] = datetime.datetime.now()
+
             combined_df = pd.concat([existing_df, new_df], ignore_index=True)
 
-            # deduplicate by GameId so buffered overlap is safe
+            # deduplicate by GameId — keep "last" so new scraped_at wins for updated rows
             combined_df = combined_df.drop_duplicates(subset=["GameId"], keep="last")
 
             clean_full_df = clean_df(combined_df)
@@ -168,6 +180,7 @@ else:
     print("No existing file found.")
     raw_df = fetch_all_games()
     clean_full_df = clean_df(raw_df)
+    clean_full_df["scraped_at"] = datetime.datetime.now()
     clean_full_df.to_csv(SAVE_PATH, index=False)
 
     print(f"Saved full dataset to: {SAVE_PATH}")
