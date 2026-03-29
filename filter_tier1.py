@@ -1,9 +1,10 @@
 import pandas as pd
 import ast
 
-all_games = pd.read_csv(r"C:\Users\carte\Desktop\LOL Scorigami\all_time_all_leagues.csv")
+all_games = pd.read_csv("all_time_all_leagues.csv")
 
-# filter to tier1 games based on tournament name, excluding certain keywords. As time progresses tier one leagues may change, but these are what have been chosen for now.
+# filter to tier1 games based on tournament name, excluding certain keywords. As time progresses tier one leagues may change, but these are what have been chosen for now
+# Wikipedia was consulted to detemine these the current tier one leagues and tournaments. 
 tier1_keywords = [
     "LCK", "LPL", "LEC", "LCS", "LCP",
     "CBLOL", "MSI", "Worlds",
@@ -36,5 +37,5 @@ print(f"Total tier1 games: {len(tier1_games)}")
 print(f"Unique scores: {tier1_games['score'].nunique()}")
 print(f"True scorigamis: {tier1_games['scorigami'].sum()}")
 
-tier1_games.to_csv(r"C:\Users\carte\Desktop\LOL Scorigami\all_time_tier1.csv", index=False)
+tier1_games.to_csv("all_time_tier1.csv", index=False)
 print("Saved to all_time_tier1.csv")

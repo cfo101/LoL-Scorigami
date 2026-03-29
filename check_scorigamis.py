@@ -4,8 +4,8 @@ import os
 import tweepy
 from pathlib import Path
 
-TIER1_PATH = r"C:\Users\carte\Desktop\LOL Scorigami\all_time_tier1.csv"
-LAST_CHECKED_PATH = r"C:\Users\carte\Desktop\LOL Scorigami\last_checked.txt"
+TIER1_PATH = "all_time_tier1.csv"
+LAST_CHECKED_PATH = "last_checked.txt"
 
 # X/Twitter credentials from environment variables
 client = tweepy.Client(
@@ -70,5 +70,3 @@ with open(LAST_CHECKED_PATH, "w") as f:
     f.write(str(pd.Timestamp.now()))
 
 print(f"\nLast checked updated to: {pd.Timestamp.now()}")
-
-send_tweet("LoL Scorigami bot is online! 🎉")
