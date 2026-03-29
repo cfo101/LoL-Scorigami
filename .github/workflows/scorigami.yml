@@ -1,0 +1,44 @@
+name: Scorigami Check
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scrape
+        run: python incremental_scrape.py
+
+      - name: Run tier1 filter
+        run: python filter_tier1.py
+
+      - name: Check scorigamis and tweet
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: python check_scorigamis.py
+
+      - name: Commit updated data files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add all_time_all_leagues.csv all_time_tier1.csv last_checked.txt
+          git diff --staged --quiet || git commit -m "Update scorigami data [skip ci]"
+          git push

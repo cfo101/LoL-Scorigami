@@ -51,17 +51,21 @@ else:
         score_count = len(tier1_games[tier1_games["score"] == row["score"]])
 
         if row["scorigami"]:
-            status = "SCORIGAMI! First time this score has ever happened"
+            # count how many unique scores exist including this one
+            unique_score_count = tier1_games["score"].nunique()
+            status = f"SCORIGAMI! That is the {unique_score_count}th unique score in Tier 1 League of Legends"
             tweet = (
-                f"SCORIGAMI! 🎉\n"
-                f"{row['Team1']} vs {row['Team2']}\n"
-                f"Final score: {w}-{l}\n"
-                f"This kill score has never been seen before in Tier 1 LoL!\n"
-                f"({row['Tournament']})"
+                f"{row['Team1']} vs {row['Team2']} ({w}-{l})\n"
+                f"SCORIGAMI! That is the {unique_score_count}th unique score in Tier 1 League of Legends 🎉"
             )
             send_tweet(tweet)
         else:
-            status = f"Seen {score_count} times before"
+            status = f"No scorigami, that score has happened {score_count} times"
+            tweet = (
+                f"{row['Team1']} vs {row['Team2']} ({w}-{l})\n"
+                f"No scorigami, that score has happened {score_count} times"
+            )
+            send_tweet(tweet)
 
         print(f"  {w}-{l} | {row['Tournament']} | {row['Team1']} vs {row['Team2']} | {row['DateTime UTC']} | {status}")
 
