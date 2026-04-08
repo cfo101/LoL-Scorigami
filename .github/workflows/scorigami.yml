@@ -1,9 +1,6 @@
 name: Scorigami Check
 
-on:
-  schedule:
-    - cron: '3,13,23,33,43,53 * * * *'
-    
+on: 
   workflow_dispatch:
 
 permissions:
