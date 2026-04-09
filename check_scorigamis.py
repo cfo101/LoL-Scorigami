@@ -3,6 +3,8 @@ import ast
 import os
 import tweepy
 from pathlib import Path
+import re
+
 
 TIER1_PATH = "all_time_tier1.csv"
 LAST_CHECKED_PATH = "last_checked.txt"
@@ -22,6 +24,9 @@ def send_tweet(message):
         print(f"Tweeted: {message}")
     except Exception as e:
         print(f"Tweet failed: {e}")
+        
+def clean_team_name(name):
+    return re.sub(r'\.(cn|com|org|net|gg|tv|io|co)$', '', name, flags=re.IGNORECASE)
 
 # load tier1 data
 tier1_games = pd.read_csv(TIER1_PATH)
@@ -45,6 +50,8 @@ new_games = recent_games[~recent_games["GameId"].isin(tweeted_ids)].copy()
 
 print(f"New games found to tweet: {len(new_games)}")
 
+
+
 if len(new_games) == 0:
     print("No new games to tweet.")
 else:
@@ -52,24 +59,27 @@ else:
     for _, row in new_games.iterrows():
         w, l = row["score"]
         score_count = len(tier1_games[tier1_games["score"] == row["score"]])
+        
+        team1 = clean_team_name(row['Team1'])
+        team2 = clean_team_name(row['Team2'])
 
         if row["scorigami"]:
             unique_score_count = tier1_games["score"].nunique()
             status = f"SCORIGAMI! That is the {unique_score_count}th unique score in Tier 1 League of Legends"
             tweet = (
-                f"{row['Team1']} vs {row['Team2']} ({w}-{l})\n"
+                f"{team1} vs {team2} ({w}-{l})\n"
                 f"SCORIGAMI! That is the {unique_score_count}th unique score in Tier 1 League of Legends 🎉"
             )
         else:
             status = f"No scorigami, that score has happened {score_count} times"
             tweet = (
-                f"{row['Team1']} vs {row['Team2']} ({w}-{l})\n"
+                f"{team1} vs {team2} ({w}-{l})\n"
                 f"No scorigami, that score has happened {score_count} times"
             )
 
         send_tweet(tweet)
         tweeted_ids.add(str(row["GameId"]))
-        print(f"  {w}-{l} | {row['Tournament']} | {row['Team1']} vs {row['Team2']} | {row['DateTime UTC']} | {status}")
+        print(f"  {w}-{l} | {row['Tournament']} | {team1} vs {team2} | {row['DateTime UTC']} | {status}")
 
 # save updated tweeted game IDs
 with open(TWEETED_GAMES_PATH, "w") as f:
