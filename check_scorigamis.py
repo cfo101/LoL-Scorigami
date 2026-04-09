@@ -6,6 +6,7 @@ from pathlib import Path
 
 TIER1_PATH = "all_time_tier1.csv"
 LAST_CHECKED_PATH = "last_checked.txt"
+TWEETED_GAMES_PATH = "tweeted_games.txt"
 
 # X/Twitter credentials from environment variables
 client = tweepy.Client(
@@ -28,22 +29,24 @@ tier1_games["score"] = tier1_games["score"].apply(ast.literal_eval)
 tier1_games["DateTime UTC"] = pd.to_datetime(tier1_games["DateTime UTC"])
 tier1_games["scraped_at"] = pd.to_datetime(tier1_games["scraped_at"])
 
-# get last checked timestamp
-if Path(LAST_CHECKED_PATH).exists():
-    with open(LAST_CHECKED_PATH, "r") as f:
-        last_checked = pd.Timestamp(f.read().strip())
-    print(f"Last checked: {last_checked}")
+# load already tweeted game IDs
+if Path(TWEETED_GAMES_PATH).exists():
+    with open(TWEETED_GAMES_PATH, "r") as f:
+        tweeted_ids = set(f.read().splitlines())
 else:
-    last_checked = pd.Timestamp.now() - pd.Timedelta(minutes=30)
-    print(f"No last_checked.txt found. Using 30 minute lookback: {last_checked}")
+    tweeted_ids = set()
 
-# find games that appeared in the dataset since last check
-new_games = tier1_games[tier1_games["scraped_at"] > last_checked].copy()
+print(f"Already tweeted {len(tweeted_ids)} games")
 
-print(f"New games found since last check: {len(new_games)}")
+# only look at games scraped in the last 24 hours to avoid processing entire history
+recent_cutoff = pd.Timestamp.now() - pd.Timedelta(hours=24)
+recent_games = tier1_games[tier1_games["scraped_at"] > recent_cutoff].copy()
+new_games = recent_games[~recent_games["GameId"].isin(tweeted_ids)].copy()
+
+print(f"New games found to tweet: {len(new_games)}")
 
 if len(new_games) == 0:
-    print("No new games since last check.")
+    print("No new games to tweet.")
 else:
     print(f"\nNew games:")
     for _, row in new_games.iterrows():
@@ -51,26 +54,31 @@ else:
         score_count = len(tier1_games[tier1_games["score"] == row["score"]])
 
         if row["scorigami"]:
-            # count how many unique scores exist including this one
             unique_score_count = tier1_games["score"].nunique()
             status = f"SCORIGAMI! That is the {unique_score_count}th unique score in Tier 1 League of Legends"
             tweet = (
                 f"{row['Team1']} vs {row['Team2']} ({w}-{l})\n"
                 f"SCORIGAMI! That is the {unique_score_count}th unique score in Tier 1 League of Legends 🎉"
             )
-            send_tweet(tweet)
         else:
             status = f"No scorigami, that score has happened {score_count} times"
             tweet = (
                 f"{row['Team1']} vs {row['Team2']} ({w}-{l})\n"
                 f"No scorigami, that score has happened {score_count} times"
             )
-            send_tweet(tweet)
 
+        send_tweet(tweet)
+        tweeted_ids.add(str(row["GameId"]))
         print(f"  {w}-{l} | {row['Tournament']} | {row['Team1']} vs {row['Team2']} | {row['DateTime UTC']} | {status}")
 
-# update last checked timestamp
+# save updated tweeted game IDs
+with open(TWEETED_GAMES_PATH, "w") as f:
+    f.write("\n".join(tweeted_ids))
+
+print(f"\nTweeted games list updated: {len(tweeted_ids)} total")
+
+# still update last_checked for reference
 with open(LAST_CHECKED_PATH, "w") as f:
     f.write(str(pd.Timestamp.now()))
 
-print(f"\nLast checked updated to: {pd.Timestamp.now()}")
+print(f"Last checked updated to: {pd.Timestamp.now()}")
