@@ -10739,7 +10739,7 @@ CBLOL/2020 Season/Split 1_Week 1_1_1,CBLOL 2020 Split 1,paiN Gaming,Flamengo Esp
 LEC/2020 Season/Spring Season_Week 1_7_1,LEC 2020 Spring,Excel Esports,Rogue (European Team),10.0,17.0,2,2020-01-25 16:43:00,31:53,0,1913,"(17, 10)",False,2026-03-28 23:13:51.721976
 CBLOL/2020 Season/Split 1_Week 1_2_1,CBLOL 2020 Split 1,Prodigy Esports,Vivo Keyd,18.0,8.0,1,2020-01-25 17:05:00,30:53,0,1853,"(18, 8)",False,2026-03-28 23:13:51.721976
 LEC/2020 Season/Spring Season_Week 1_8_1,LEC 2020 Spring,Origen,FC Schalke 04 Esports,15.0,4.0,1,2020-01-25 17:38:00,37:52,0,2272,"(15, 4)",False,2026-03-28 23:13:51.721976
-CBLOL/2020 Season/Split 1_Week 1_3_1,CBLOL 2020 Split 1,INTZ,Redemption eSports Porto Alegre,20.0,32.0,2,2020-01-25 18:06:00,41:58,0,2518,"(32, 20)",True,2026-03-28 23:13:51.721976
+CBLOL/2020 Season/Split 1_Week 1_3_1,CBLOL 2020 Split 1,INTZ,Redemption eSports Porto Alegre,20.0,32.0,2,2020-01-25 18:06:00,41:58,0,2518,"(32, 20)",False,2026-03-28 23:13:51.721976
 LEC/2020 Season/Spring Season_Week 1_9_1,LEC 2020 Spring,Fnatic,Misfits Gaming,17.0,5.0,1,2020-01-25 18:41:00,20:01,0,1201,"(17, 5)",False,2026-03-28 23:13:51.721976
 CBLOL/2020 Season/Split 1_Week 1_4_1,CBLOL 2020 Split 1,FURIA Uppercut,KaBuM! Esports,15.0,9.0,1,2020-01-25 19:14:00,34:42,0,2082,"(15, 9)",False,2026-03-28 23:13:51.721976
 LEC/2020 Season/Spring Season_Week 1_10_1,LEC 2020 Spring,SK Gaming,G2 Esports,8.0,23.0,2,2020-01-25 19:26:00,30:53,0,1853,"(23, 8)",False,2026-03-28 23:13:51.721976
@@ -25685,3 +25685,6 @@ LEC/2026 Season/Summer Season_Week 2_7_1,LEC 2026 Summer,Natus Vincere,Shifters,
 LEC/2026 Season/Summer Season_Week 2_7_2,LEC 2026 Summer,Natus Vincere,Shifters,22.0,10.0,1,2026-08-03 16:10:00,34:33,0,2073,"(22, 10)",False,2026-08-05 00:05:37.650479
 LEC/2026 Season/Summer Season_Week 2_8_1,LEC 2026 Summer,Karmine Corp,Team Heretics,18.0,6.0,1,2026-08-03 17:12:00,39:56,0,2396,"(18, 6)",False,2026-08-05 01:11:51.129217
 LEC/2026 Season/Summer Season_Week 2_8_2,LEC 2026 Summer,Karmine Corp,Team Heretics,16.0,5.0,1,2026-08-03 18:12:00,34:33,0,2073,"(16, 5)",False,2026-08-05 01:11:51.129217
+LCK/2026 Season/Rounds 3-4_Week 11_1_1,LCK 2026 Rounds 3-4,Nongshim RedForce,HANJIN BRION,20.0,32.0,2,2026-08-05 08:04:00,40:24,0,2424,"(32, 20)",False,2026-08-05 11:41:03.614881
+LCK/2026 Season/Rounds 3-4_Week 11_1_2,LCK 2026 Rounds 3-4,HANJIN BRION,Nongshim RedForce,9.0,18.0,2,2026-08-05 09:07:00,30:27,0,1827,"(18, 9)",False,2026-08-05 11:41:03.614881
+LCK/2026 Season/Rounds 3-4_Week 11_1_3,LCK 2026 Rounds 3-4,Nongshim RedForce,HANJIN BRION,4.0,19.0,2,2026-08-05 09:59:00,31:19,0,1879,"(19, 4)",False,2026-08-05 11:41:03.614881
