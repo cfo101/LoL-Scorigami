@@ -1899,7 +1899,7 @@ NA LCS/2015 Season/Spring Playoffs_Finals_1_4,NA LCS 2015 Spring Playoffs,Cloud9
 2015 Mid-Season Invitational_Day 2_1_1,MSI 2015,EDward Gaming,Fnatic,36.0,10.0,1,2015-05-08 20:10:00,32:35,0,1955,"(36, 10)",False,2026-03-28 23:13:51.721976
 2015 Mid-Season Invitational_Day 2_2_1,MSI 2015,TSM,ahq eSports Club,3.0,19.0,2,2015-05-08 20:59:00,29:04,0,1744,"(19, 3)",False,2026-03-28 23:13:51.721976
 2015 Mid-Season Invitational_Day 2_3_1,MSI 2015,EDward Gaming,Beşiktaş Esports,27.0,3.0,1,2015-05-08 21:59:00,22:30,0,1350,"(27, 3)",False,2026-03-28 23:13:51.721976
-2015 Mid-Season Invitational_Day 2_4_1,MSI 2015,SK Telecom T1,Fnatic,16.0,26.0,1,2015-05-08 22:49:00,44:05,0,2645,"(16, 26)",True,2026-03-28 23:13:51.721976
+2015 Mid-Season Invitational_Day 2_4_1,MSI 2015,SK Telecom T1,Fnatic,16.0,26.0,1,2015-05-08 22:49:00,44:05,0,2645,"(16, 26)",False,2026-03-28 23:13:51.721976
 2015 Mid-Season Invitational_Day 1_5_1,MSI 2015,Fnatic,ahq eSports Club,5.0,24.0,2,2015-05-09 00:28:00,31:49,0,1909,"(24, 5)",False,2026-03-28 23:13:51.721976
 2015 Mid-Season Invitational_Day 1_6_1,MSI 2015,SK Telecom T1,EDward Gaming,14.0,3.0,1,2015-05-09 01:25:00,33:34,0,2014,"(14, 3)",False,2026-03-28 23:13:51.721976
 2015 Mid-Season Invitational_Day 1_7_1,MSI 2015,ahq eSports Club,Beşiktaş Esports,28.0,15.0,1,2015-05-09 02:26:00,37:11,0,2231,"(28, 15)",False,2026-03-28 23:13:51.721976
@@ -25696,10 +25696,18 @@ LCK/2026 Season/Rounds 3-4_Week 11_2_2,LCK 2026 Rounds 3-4,Gen.G,Hanwha Life Esp
 LPL/2026 Season/Split 3_Week 3_2_1,LPL 2026 Split 3,EDward Gaming,Top Esports,7.0,23.0,2,2026-08-05 12:33:00,29:51,0,1791,"(23, 7)",False,2026-08-06 20:12:34.863862
 LCK/2026 Season/Rounds 3-4_Week 11_2_3,LCK 2026 Rounds 3-4,Hanwha Life Esports,Gen.G,14.0,27.0,2,2026-08-05 13:15:00,36:03,0,2163,"(27, 14)",False,2026-08-06 20:12:34.863862
 LPL/2026 Season/Split 3_Week 3_2_2,LPL 2026 Split 3,Top Esports,EDward Gaming,21.0,9.0,1,2026-08-05 13:29:00,39:36,0,2376,"(21, 9)",False,2026-08-06 20:12:34.863862
-LCK/2026 Season/Rounds 3-4_Week 11_3_1,LCK 2026 Rounds 3-4,Kiwoom DRX,DN SOOPers,27.0,6.0,1,2026-08-06 08:07:00,28:24,0,1704,"(27, 6)",False,2026-08-07 03:55:27.130261
-LCK/2026 Season/Rounds 3-4_Week 11_3_2,LCK 2026 Rounds 3-4,DN SOOPers,Kiwoom DRX,8.0,23.0,2,2026-08-06 08:57:00,31:00,0,1860,"(23, 8)",False,2026-08-07 03:55:27.130261
-LCP/2026 Season/Split 3_Round 3_4_1,LCP 2026 Split 3,Ground Zero Gaming,Fukuoka SoftBank HAWKS gaming,25.0,21.0,1,2026-08-06 09:18:00,52:42,0,3162,"(25, 21)",False,2026-08-07 03:55:27.130261
-LCK/2026 Season/Rounds 3-4_Week 11_4_1,LCK 2026 Rounds 3-4,T1,Dplus Kia,20.0,4.0,1,2026-08-06 10:15:00,28:20,0,1700,"(20, 4)",False,2026-08-07 03:55:27.130261
-LCP/2026 Season/Split 3_Round 3_4_2,LCP 2026 Split 3,Fukuoka SoftBank HAWKS gaming,Ground Zero Gaming,2.0,15.0,2,2026-08-06 10:31:00,30:48,0,1848,"(15, 2)",False,2026-08-07 03:55:27.130261
-LCK/2026 Season/Rounds 3-4_Week 11_4_2,LCK 2026 Rounds 3-4,T1,Dplus Kia,17.0,7.0,1,2026-08-06 11:06:00,36:53,0,2213,"(17, 7)",False,2026-08-07 03:55:27.130261
-LCP/2026 Season/Split 3_Round 3_4_3,LCP 2026 Split 3,Ground Zero Gaming,Fukuoka SoftBank HAWKS gaming,19.0,6.0,1,2026-08-06 11:22:00,28:17,0,1697,"(19, 6)",False,2026-08-07 03:55:27.130261
+LPL/2026 Season/Split 3_Week 3_3_1,LPL 2026 Split 3,ThunderTalk Gaming,LGD Gaming,8.0,22.0,2,2026-08-06 07:13:00,34:55,0,2095,"(22, 8)",False,2026-08-07 04:04:01.125564
+LCK/2026 Season/Rounds 3-4_Week 11_3_1,LCK 2026 Rounds 3-4,Kiwoom DRX,DN SOOPers,27.0,6.0,1,2026-08-06 08:07:00,28:24,0,1704,"(27, 6)",False,2026-08-07 04:04:01.125564
+LPL/2026 Season/Split 3_Week 3_3_2,LPL 2026 Split 3,LGD Gaming,ThunderTalk Gaming,14.0,23.0,2,2026-08-06 08:11:00,30:49,0,1849,"(23, 14)",False,2026-08-07 04:04:01.125564
+LCK/2026 Season/Rounds 3-4_Week 11_3_2,LCK 2026 Rounds 3-4,DN SOOPers,Kiwoom DRX,8.0,23.0,2,2026-08-06 08:57:00,31:00,0,1860,"(23, 8)",False,2026-08-07 04:04:01.125564
+LPL/2026 Season/Split 3_Week 3_3_3,LPL 2026 Split 3,ThunderTalk Gaming,LGD Gaming,22.0,14.0,1,2026-08-06 09:06:00,32:12,0,1932,"(22, 14)",False,2026-08-07 04:04:01.125564
+LCP/2026 Season/Split 3_Round 3_4_1,LCP 2026 Split 3,Ground Zero Gaming,Fukuoka SoftBank HAWKS gaming,25.0,21.0,1,2026-08-06 09:18:00,52:42,0,3162,"(25, 21)",False,2026-08-07 04:04:01.125564
+LCK/2026 Season/Rounds 3-4_Week 11_4_1,LCK 2026 Rounds 3-4,T1,Dplus Kia,20.0,4.0,1,2026-08-06 10:15:00,28:20,0,1700,"(20, 4)",False,2026-08-07 04:04:01.125564
+LPL/2026 Season/Split 3_Week 3_4_1,LPL 2026 Split 3,Ninjas in Pyjamas.CN,Invictus Gaming,16.0,22.0,2,2026-08-06 10:22:00,34:30,0,2070,"(22, 16)",False,2026-08-07 04:04:01.125564
+LCP/2026 Season/Split 3_Round 3_4_2,LCP 2026 Split 3,Fukuoka SoftBank HAWKS gaming,Ground Zero Gaming,2.0,15.0,2,2026-08-06 10:31:00,30:48,0,1848,"(15, 2)",False,2026-08-07 04:04:01.125564
+LCK/2026 Season/Rounds 3-4_Week 11_4_2,LCK 2026 Rounds 3-4,T1,Dplus Kia,17.0,7.0,1,2026-08-06 11:06:00,36:53,0,2213,"(17, 7)",False,2026-08-07 04:04:01.125564
+LPL/2026 Season/Split 3_Week 3_4_2,LPL 2026 Split 3,Invictus Gaming,Ninjas in Pyjamas.CN,12.0,27.0,2,2026-08-06 11:21:00,31:08,0,1868,"(27, 12)",False,2026-08-07 04:04:01.125564
+LCP/2026 Season/Split 3_Round 3_4_3,LCP 2026 Split 3,Ground Zero Gaming,Fukuoka SoftBank HAWKS gaming,19.0,6.0,1,2026-08-06 11:22:00,28:17,0,1697,"(19, 6)",False,2026-08-07 04:04:01.125564
+LPL/2026 Season/Split 3_Week 3_4_3,LPL 2026 Split 3,Ninjas in Pyjamas.CN,Invictus Gaming,16.0,21.0,1,2026-08-06 12:20:00,46:52,0,2812,"(16, 21)",False,2026-08-07 04:04:01.125564
+LPL/2026 Season/Split 3_Week 3_5_1,LPL 2026 Split 3,Anyone's Legend,Team WE,23.0,20.0,2,2026-08-06 13:49:00,36:47,0,2207,"(20, 23)",False,2026-08-07 04:04:01.125564
+LPL/2026 Season/Split 3_Week 3_5_2,LPL 2026 Split 3,Team WE,Anyone's Legend,16.0,26.0,1,2026-08-06 14:50:00,30:57,0,1857,"(16, 26)",False,2026-08-07 04:04:01.125564
