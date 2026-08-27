@@ -23786,7 +23786,7 @@ LPL/2025 Season/Grand Finals_Finals_1_2,LPL 2025 Grand Finals,Bilibili Gaming,To
 LCK/2025 Season/Season Playoffs_Round 3_1_5,LCK 2025 Season Playoffs,T1,Gen.G,5.0,23.0,2,2025-09-21 09:50:00,32:13,0,1933,"(23, 5)",False,2026-03-28 23:13:51.721976
 LCP/2025 Season/Season Finals Playoffs_Finals_1_1,LCP 2025 Season Finals Playoffs,CTBC Flying Oyster,Team Secret Whales,18.0,9.0,1,2025-09-21 10:11:00,30:36,0,1836,"(18, 9)",False,2026-03-28 23:13:51.721976
 LPL/2025 Season/Grand Finals_Finals_1_3,LPL 2025 Grand Finals,Top Esports,Bilibili Gaming,16.0,10.0,1,2025-09-21 10:18:00,28:56,0,1736,"(16, 10)",False,2026-03-28 23:13:51.721976
-LPL/2025 Season/Grand Finals_Finals_1_4,LPL 2025 Grand Finals,Bilibili Gaming,Top Esports,32.0,7.0,1,2025-09-21 11:10:00,27:09,0,1629,"(32, 7)",True,2026-03-28 23:13:51.721976
+LPL/2025 Season/Grand Finals_Finals_1_4,LPL 2025 Grand Finals,Bilibili Gaming,Top Esports,32.0,7.0,1,2025-09-21 11:10:00,27:09,0,1629,"(32, 7)",False,2026-03-28 23:13:51.721976
 LCP/2025 Season/Season Finals Playoffs_Finals_1_2,LCP 2025 Season Finals Playoffs,CTBC Flying Oyster,Team Secret Whales,29.0,16.0,1,2025-09-21 11:11:00,30:47,0,1847,"(29, 16)",False,2026-03-28 23:13:51.721976
 LPL/2025 Season/Grand Finals_Finals_1_5,LPL 2025 Grand Finals,Top Esports,Bilibili Gaming,11.0,27.0,2,2025-09-21 12:03:00,39:37,0,2377,"(27, 11)",False,2026-03-28 23:13:51.721976
 LCP/2025 Season/Season Finals Playoffs_Finals_1_3,LCP 2025 Season Finals Playoffs,Team Secret Whales,CTBC Flying Oyster,18.0,26.0,2,2025-09-21 12:18:00,34:25,0,2065,"(26, 18)",False,2026-03-28 23:13:51.721976
@@ -26029,8 +26029,12 @@ LEC/2026 Season/Summer Season_Week 5_7_2,LEC 2026 Summer,Fnatic,Natus Vincere,9.
 LEC/2026 Season/Summer Season_Week 5_8_1,LEC 2026 Summer,G2 Esports,GIANTX,20.0,6.0,1,2026-08-24 17:12:00,25:35,0,1535,"(20, 6)",False,2026-08-25 18:42:04.623047
 LEC/2026 Season/Summer Season_Week 5_8_2,LEC 2026 Summer,G2 Esports,GIANTX,14.0,18.0,2,2026-08-24 18:00:00,37:18,0,2238,"(18, 14)",False,2026-08-25 20:25:05.582847
 LEC/2026 Season/Summer Season_Week 5_8_3,LEC 2026 Summer,GIANTX,G2 Esports,18.0,13.0,1,2026-08-24 18:57:00,34:55,0,2095,"(18, 13)",False,2026-08-25 21:41:29.954688
-LCK/2026 Season/Season Play-In_Round 1_1_1,LCK 2026 Season Play-In,HANJIN BRION,KT Rolster,11.0,24.0,2,2026-08-26 08:08:00,35:28,0,2128,"(24, 11)",False,2026-08-27 08:54:09.324981
-LCK/2026 Season/Season Play-In_Round 1_1_2,LCK 2026 Season Play-In,KT Rolster,HANJIN BRION,6.0,12.0,2,2026-08-26 09:10:00,30:39,0,1839,"(12, 6)",False,2026-08-27 08:54:09.324981
-LCK/2026 Season/Season Play-In_Round 1_1_3,LCK 2026 Season Play-In,KT Rolster,HANJIN BRION,3.0,13.0,2,2026-08-26 10:04:00,35:04,0,2104,"(13, 3)",False,2026-08-27 08:54:09.324981
-LCK/2026 Season/Season Play-In_Round 1_1_4,LCK 2026 Season Play-In,HANJIN BRION,KT Rolster,8.0,17.0,2,2026-08-26 11:01:00,33:38,0,2018,"(17, 8)",False,2026-08-27 08:54:09.324981
-LCK/2026 Season/Season Play-In_Round 1_1_5,LCK 2026 Season Play-In,HANJIN BRION,KT Rolster,13.0,19.0,2,2026-08-26 12:00:00,45:30,0,2730,"(19, 13)",False,2026-08-27 08:54:09.324981
+2026 Worlds Star Challengers Invitational/LPL Regional Qualifier_Round 2_3_1,2026 WSCI-LPL Regional Qualifier,ZSK (Chinese Team),我超威,32.0,7.0,1,2026-08-26 05:11:00,24:13,0,1453,"(32, 7)",False,2026-08-27 09:07:41.632382
+2026 Worlds Star Challengers Invitational/LPL Regional Qualifier_Round 2_3_2,2026 WSCI-LPL Regional Qualifier,ZSK (Chinese Team),我超威,33.0,8.0,1,2026-08-26 06:03:00,19:17,0,1157,"(33, 8)",False,2026-08-27 09:07:41.632382
+2026 Worlds Star Challengers Invitational/LPL Regional Qualifier_Round 2_4_1,2026 WSCI-LPL Regional Qualifier,Ocean & Kimi Tournament Alliance,小爬虫,26.0,8.0,1,2026-08-26 06:46:00,22:01,0,1321,"(26, 8)",False,2026-08-27 09:07:41.632382
+2026 Worlds Star Challengers Invitational/LPL Regional Qualifier_Round 2_4_2,2026 WSCI-LPL Regional Qualifier,Ocean & Kimi Tournament Alliance,小爬虫,24.0,17.0,1,2026-08-26 07:28:00,31:01,0,1861,"(24, 17)",False,2026-08-27 09:07:41.632382
+LCK/2026 Season/Season Play-In_Round 1_1_1,LCK 2026 Season Play-In,HANJIN BRION,KT Rolster,11.0,24.0,2,2026-08-26 08:08:00,35:28,0,2128,"(24, 11)",False,2026-08-27 09:07:41.632382
+LCK/2026 Season/Season Play-In_Round 1_1_2,LCK 2026 Season Play-In,KT Rolster,HANJIN BRION,6.0,12.0,2,2026-08-26 09:10:00,30:39,0,1839,"(12, 6)",False,2026-08-27 09:07:41.632382
+LCK/2026 Season/Season Play-In_Round 1_1_3,LCK 2026 Season Play-In,KT Rolster,HANJIN BRION,3.0,13.0,2,2026-08-26 10:04:00,35:04,0,2104,"(13, 3)",False,2026-08-27 09:07:41.632382
+LCK/2026 Season/Season Play-In_Round 1_1_4,LCK 2026 Season Play-In,HANJIN BRION,KT Rolster,8.0,17.0,2,2026-08-26 11:01:00,33:38,0,2018,"(17, 8)",False,2026-08-27 09:07:41.632382
+LCK/2026 Season/Season Play-In_Round 1_1_5,LCK 2026 Season Play-In,HANJIN BRION,KT Rolster,13.0,19.0,2,2026-08-26 12:00:00,45:30,0,2730,"(19, 13)",False,2026-08-27 09:07:41.632382
